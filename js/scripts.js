@@ -11,21 +11,33 @@ var roman = function(number) {
     if (singleDigitNumber === false && number < 50) {
       var numberTenToFortynine = true;
     }
-    console.log(singleDigitNumber);
+
     if (number < 4) {
       return "I".repeat(number);
     } else if (number === 4) {
       return "IV";
     } else if (number === 5) {
       return "V";
-    } else if (number === 6) {
-      return "VI";
-    } else if (number === 7) {
-      return "VII";
-    } else if (number === 8) {
-      return "VIII";
+    } else if (number > 5 &&  number < 9) {
+      return "V" + "I".repeat(number % 5);
     } else if (number === 9) {
       return "IX";
+    }
+
+    if (number === 10) {
+      return "X";
+    } else if (number > 10 && number < 14) {
+      return "X" + "I".repeat(number % 5);
+    } else if (number === 14) {
+      return "XIV";
+    } else if (number === 15) {
+      return "XV";
+    } else if (number > 15 && number < 19) {
+      return "XV" + "I".repeat(number % 5);
+    } else if (number === 19) {
+      return "XIX";
+    } else if (number === 20) {
+      return "XX";
     }
 
 
