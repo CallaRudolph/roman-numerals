@@ -2,7 +2,16 @@
 var roman = function(number) {
 
   var symbols = ["I", "V", "X", "L", "C", "D", "M"];
+  var singleDigitNumber = false;
 
+    if (number <= 9) {
+      singleDigitNumber = true;
+    }
+
+    if (singleDigitNumber === false && number < 50) {
+      var numberTenToFortynine = true;
+    }
+    console.log(singleDigitNumber);
     if (number < 4) {
       return "I".repeat(number);
     } else if (number === 4) {
@@ -18,6 +27,7 @@ var roman = function(number) {
     } else if (number === 9) {
       return "IX";
     }
+
 
   // if (number === 1) {
   //   return symbols[0];
