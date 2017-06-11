@@ -15,9 +15,7 @@ $(document).ready(function() {
     if (number >= 4000 || number <= 0) {
       result = "Number invalid, Roman Numerals only count from 1 to 3,999.";
     }
-    // } else if (number == NaN) {
-    //   result = "Please enter a number"
-    // }
+
     if (string.charAt(thousandsPlace) == 1) {
       result = result + "M";
     } else if (string.charAt(thousandsPlace) == 2) {
@@ -45,7 +43,49 @@ $(document).ready(function() {
     } else if (string.charAt(hundredsPlace) == 1) {
       result = result + "C";
     }
-    
+
+    if (string.charAt(tensPlace) == 9) {
+      result = result + "XC";
+    } else if (string.charAt(tensPlace) == 8) {
+      result = result + "LXXX";
+    } else if (string.charAt(tensPlace) == 7) {
+      result = result + "LXX";
+    } else if (string.charAt(tensPlace) == 6) {
+      result = result + "LX";
+    } else if (string.charAt(tensPlace) == 5) {
+      result = result + "L";
+    } else if (string.charAt(tensPlace) == 4) {
+      result = result + "XL";
+    } else if (string.charAt(tensPlace) == 3) {
+       result = result + "XXX";
+    } else if (string.charAt(tensPlace) == 2) {
+        result = result + "XX";
+    } else if (string.charAt(tensPlace) == 1) {
+      result = result + "X";
+    }
+
+    if (string.charAt(onesPlace) == 9) {
+      result = result + "IX";
+    } else if (string.charAt(onesPlace) == 8) {
+      result = result + "VIII";
+    } else if (string.charAt(onesPlace) == 7) {
+      result = result + "VII";
+    } else if (string.charAt(onesPlace) == 6) {
+      result = result + "VI";
+    } else if (string.charAt(onesPlace) == 5) {
+       result = result + "V";
+    } else if (string.charAt(onesPlace) == 4) {
+      result = result + "IV";
+    } else if (string.charAt(onesPlace) == 3) {
+      result = result + "III";
+    } else if (string.charAt(onesPlace) == 2) {
+      result = result + "II";
+    } else if (string.charAt(onesPlace) == 1) {
+      result = result + "I";
+    } else {
+      result = "Please enter a number."
+    }
+
     $("#result").text(result);
   });
 });
