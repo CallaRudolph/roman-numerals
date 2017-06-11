@@ -12,8 +12,8 @@ $(document).ready(function() {
     var tensPlace = ((string.length) - 2);
     var onesPlace = ((string.length) - 1);
 
-    if (number >= 4000 || number <= 0) {
-      result = "Number invalid, Roman Numerals only count from 1 to 3,999.";
+    if (number >= 4000 || number <= 0 || isNaN(number) ) {
+      result = "Invalid entry; Roman Numerals only count from 1 to 3,999.";
     }
 
     if (string.charAt(thousandsPlace) == 1) {
@@ -82,8 +82,6 @@ $(document).ready(function() {
       result = result + "II";
     } else if (string.charAt(onesPlace) == 1) {
       result = result + "I";
-    } else {
-      result = "Please enter a number."
     }
 
     $("#result").text(result);
