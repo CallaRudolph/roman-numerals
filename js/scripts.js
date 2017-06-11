@@ -23,9 +23,29 @@ $(document).ready(function() {
     } else if (string.charAt(thousandsPlace) == 2) {
       result = result + "MM";
     } else if (string.charAt(thousandsPlace) == 3) {
-      result = result + "MMM"
+      result = result + "MMM";
     }
 
+    if (string.charAt(hundredsPlace) == 9) {
+      result = result + "CM";
+    } else if (string.charAt(hundredsPlace) == 8) {
+      result = result + "DCCC";
+    } else if (string.charAt(hundredsPlace) == 7) {
+      result = result + "DCC";
+    } else if (string.charAt(hundredsPlace) == 6) {
+      result = result + "DC";
+    } else if (string.charAt(hundredsPlace) == 5) {
+      result = result + "D";
+    } else if (string.charAt(hundredsPlace) == 4) {
+      result = result + "CD";
+    } else if (string.charAt(hundredsPlace) == 3) {
+      result = result + "CCC";
+    } else if (string.charAt(hundredsPlace) == 2) {
+      result = result + "CC";
+    } else if (string.charAt(hundredsPlace) == 1) {
+      result = result + "C";
+    }
+    
     $("#result").text(result);
   });
 });
